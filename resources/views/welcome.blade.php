@@ -41,7 +41,7 @@
 
 
             <ul class="fh5co-special" data-offcanvass="yes">
-            <form class="" action="{{ route ('login')}}" method="post">{{ csrf_field()}}
+            <form class="" action="/login" method="post">{{ csrf_field()}}
               <li><label class="hilda"><b>EMAIL</b></label><input type="text" name="email" placeholder="Email Address" value="{{ old('email') }}" required=""></li>
               <li><label class="hilda"><b>PASSWORD</b></label><input type="password" name="password" placeholder="password"value="{{ old('password') }}" required=""></li>
               <li><button type="submit" name="submit">Submit</button></li>
@@ -64,48 +64,49 @@
             <div class="row" style="padding-top: 20px;">
                 <div class="col-sm-5 col-sm-offset-7 fh5co-cover-text fh5co-cover-intro imondopac">
                   <br><br><br><br>  <h3 class="text-center mg-lg tc-white">Sign Up New Member</h3>
-                  <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+                  <form class="form-horizontal" role="form" method="POST" action="/postregister">
                       {{ csrf_field() }}
 
-                      <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                          <label for="name" class="col-md-4 control-label">Name</label>
+                      <div class="form-group">
+                          <label class="col-md-4 imondwhite control-label">First Name</label>
 
                           <div class="col-md-6">
-                              <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                              @if ($errors->has('name'))
-                                  <span class="help-block">
-                                      <strong>{{ $errors->first('name') }}</strong>
-                                  </span>
-                              @endif
+                              <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" required autofocus>
                           </div>
                       </div>
 
-                      <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                          <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                      <div class="form-group">
+                          <label class="col-md-4 imondwhite control-label">Last Name</label>
 
                           <div class="col-md-6">
-                              <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                              @if ($errors->has('email'))
-                                  <span class="help-block">
-                                      <strong>{{ $errors->first('email') }}</strong>
-                                  </span>
-                              @endif
+                              <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required autofocus>
                           </div>
                       </div>
 
-                      <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                      <div class="form-group">
+                          <label class="col-md-4 imondwhite control-label">E-Mail Address</label>
+
+                          <div class="col-md-6">
+                              <input type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="col-md-4 control-label">User Role</label>
+                          <div class="col-md-6">
+                            <select class="form-control" name="role">
+                              <option></option>
+                              <option>admin</option>
+                              <option>clerk</option>
+                            </select>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
                           <label for="password" class="col-md-4 control-label">Password</label>
 
                           <div class="col-md-6">
                               <input id="password" type="password" class="form-control" name="password" required>
-
-                              @if ($errors->has('password'))
-                                  <span class="help-block">
-                                      <strong>{{ $errors->first('password') }}</strong>
-                                  </span>
-                              @endif
                           </div>
                       </div>
 

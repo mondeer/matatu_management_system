@@ -5,8 +5,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// auth routes
+
+Route::post('/postregister', 'RegisterCtrl@postRegister');
+
+Route::post('/login', 'LoginCtrl@login');
+
+Route::post('/logout', 'LoginCtrl@logout');
+
+// end auth routes
+
+
+
 Route::get('/system/admin', function() {
-  return view('admin');
+  return view('admin.admindash');
 });
 
 Route::get('/system/create', 'MemberCtrl@create');
@@ -25,7 +38,3 @@ Route::resource('/system', 'MemberCtrl');
 Route::get('/system/scheduler', function() {
   return view('schedule');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

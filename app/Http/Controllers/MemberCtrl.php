@@ -8,7 +8,7 @@ use hilda\Member;
 class MemberCtrl extends Controller
 {
     public function create(){
-      return view('create');
+      return view('admin.create');
     }
 
     public function postCreate(Request $request) {
