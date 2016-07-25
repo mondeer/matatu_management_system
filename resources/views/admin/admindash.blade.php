@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>CHEP MATATU SACCO||</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -25,7 +25,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="green" data-image="{{ asset ('assets/img/sidebar-5.jpg')}}">
+    <div class="sidebar" data-color="green" data-image="{{ asset ('assets/img/sidebar-2.jpg')}}">
 
     <!--
 
@@ -43,25 +43,25 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="/system/members">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>Manage Members</p>
                     </a>
                 </li>
                 <li>
                     <a href="/system/reminders">
-                        <i class="pe-7s-user"></i>
+                        <i class="pe-7s-note"></i>
                         <p>Reminders</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="">
                         <i class="pe-7s-note2"></i>
                         <p>Table List</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="">
                         <i class="pe-7s-news-paper"></i>
                         <p>Typography</p>
                     </a>
@@ -75,13 +75,7 @@
                 <li>
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>Mapped Routes</p>
                     </a>
                 </li>
 

@@ -22,6 +22,14 @@ Route::get('/system/admin', function() {
   return view('admin.admindash');
 });
 
+Route::get('/system/reminders', function() {
+  return view('admin.reminders.reminders');
+});
+
+Route::get('/system/reminders/dl', function() {
+  return view('admin.reminders.dlrem');
+});
+
 Route::get('/system/create', 'MemberCtrl@create');
 
 Route::post('/system/create', 'MemberCtrl@postCreate');

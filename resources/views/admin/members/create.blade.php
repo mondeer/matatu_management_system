@@ -1,11 +1,11 @@
-@extends('admin.admindash')
+@extends('admin.members.members')
 
-@section('content')
+@section('members')
 
           <hr style="border-right: 1px solid #F20000;"></hr>
 
         <div class="row ">
-          <div class="col-lg-12">
+          <div class="col-lg-8">
             <div class="panel panel-default">
                 <div class="panel-heading">Fill in Member Details</div>
                 <div class="panel-body">
