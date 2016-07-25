@@ -8,7 +8,7 @@ use hilda\Member;
 class MemberCtrl extends Controller
 {
     public function create(){
-      return view('admin.create');
+      return view('admin.members.create');
     }
 
     public function postCreate(Request $request) {
@@ -29,13 +29,13 @@ class MemberCtrl extends Controller
     public function view() {
       $members = Member::all();
 
-      return view('view')->with('members', $members);
+      return view('admin.members.view')->with('members', $members);
     }
 
     public function edit($id)
     {
       $member = Member::findOrFail($id);
-      return view('edit')->with('member', $member);
+      return view('admin.members.edit')->with('member', $member);
     }
 
     public function update(Request $request, $id)
@@ -55,7 +55,7 @@ class MemberCtrl extends Controller
     public function delete() {
       $members = Member::all();
 
-      return view('deregister')->with('members', $members);
+      return view('admin.members.deregister')->with('members', $members);
     }
 
     public function destroy($id)

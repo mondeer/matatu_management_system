@@ -1,6 +1,6 @@
-@extends('admin')
+@extends('admin.members.members')
 
-@section('content')
+@section('members')
 <h3><i class="fa fa-angle-right"></i> Update Motorcycle Detail</h3>
 
     <!-- INLINE FORM ELELEMNTS -->
@@ -10,7 +10,7 @@
                 <div class="panel-heading">Update Member Details</div>
                 <div class="panel-body">
                   <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data"
-                          action="/system/{{$member->id}}">
+                          action="/system/{{$member->id}}/edit">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                          <input type="hidden" name="_method" value="put">
 

@@ -1,6 +1,6 @@
-@extends('admin')
+@extends('admin.members.members')
 
-@section('content')
+@section('members')
 <div class="panel panel-body">
     <h1 class="text-center">Chep Matatu Vehicles</h1>
     <table class="table table-striped table-positive table-hover">
@@ -27,7 +27,7 @@
                           <td>{{$member->dor}}</td>
                           <td>{{$member->phone}}</td>
                           <td>
-                              <form class="success delete" action="/system/{{ $member->id }}" method="post">
+                              <form class="success delete" action="/system/{{ $member->id }}/delete" method="post">
                               <input type="hidden" name="_method" value="delete">
                               <input type="hidden" name="_token" value="{{ csrf_token() }}">
                               <button class="btn btn-primary" type="submit" value="Delete">Delete</button>
