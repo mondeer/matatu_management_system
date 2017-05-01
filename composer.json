@@ -9,7 +9,9 @@
         "laravel/framework": "5.3.*",
         "guzzlehttp/guzzle": "^6.2",
         "cartalyst/sentinel": "^2.0",
-        "cornford/googlmapper": "2.*"
+        "cornford/googlmapper": "2.*",
+        "consoletvs/charts": "4.*",
+        "kagga/telco": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

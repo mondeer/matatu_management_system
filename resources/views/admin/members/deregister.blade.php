@@ -2,17 +2,17 @@
 
 @section('members')
 <div class="panel panel-body">
-    <h1 class="text-center">Chep Matatu Vehicles</h1>
+    <h1 class="text-center">Delete A Member From the System</h1>
     <table class="table table-striped table-positive table-hover">
 
               <thead>
               <tr>
-                  <th><i class="fa fa-user"></i> Id.</th>
-                  <th><i class="fa fa-user"></i> Owner Name</th>
-                  <th><i class="fa fa-user"></i> Gender</th>
-                  <th><i class="fa fa-user"></i> Motor Reg. No.</th>
-                  <th><i class="fa fa-user"></i> Date of Registration</th>
-                  <th><i class="fa fa-user"></i> Phone</th>
+                  <th>Id.</th>
+                  <th>Owner Name</th>
+                  <th>Gender</th>
+                  <th>Motor Reg. No.</th>
+                  <th>Date of Registration</th>
+                  <th>Phone</th>
                   <th>Edit</th>
               </tr>
               </thead>
@@ -21,7 +21,7 @@
                   @foreach($members as $member)
                       <tr>
                           <td>{{$member->id}}</td>
-                          <td>{{$member->name}}</td>
+                          <td>{{$member->owner_name}}</td>
                           <td>{{$member->gender}}</td>
                           <td>{{$member->motor_reg}}</td>
                           <td>{{$member->dor}}</td>

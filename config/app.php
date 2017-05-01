@@ -179,8 +179,8 @@ return [
         hilda\Providers\RouteServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
-
-
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
+        Kagga\Telco\TelcoServiceProvider::class
     ],
 
     /*
@@ -232,6 +232,8 @@ return [
         'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
+        'Telco' => Kagga\Telco\facades\Telco::class,
     ],
 
 ];
