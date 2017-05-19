@@ -9,11 +9,6 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Fill in Member Details</div>
                 <div class="panel-body">
-                    @if (count($errors) > 0)
-                        <div class="alert alert-danger">
-                            {{$errors->first()}}
-                        </div>
-                    @endif
 
                     <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data"
                           action="{{ url('/system/create') }}">
@@ -22,14 +17,14 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">Owner Name</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="owner_name" value="{{ old('owner_name') }}">
+                                <input type="text" class="form-control" name="owner_name" value="{{ old('owner_name') }}" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label">Drivers Name</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="driver_name" value="{{ old('driver_name') }}">
+                                <input type="text" class="form-control" name="driver_name" value="{{ old('driver_name') }}" required>
                             </div>
                         </div>
 
@@ -46,28 +41,28 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">Motor Registration</label>
                             <div class="col-md-6">
-                              <input type="text" class="form-control" name="motor_reg" value="{{ old('motor_reg') }}">
+                              <input type="text" class="form-control" name="motor_reg" value="{{ old('motor_reg') }}" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label">LogBook Number</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="logbook" value="{{ old('logbook') }}">
+                                <input type="text" class="form-control" name="logbook" value="{{ old('logbook') }}" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label">Date of Reg</label>
                             <div class="col-md-6">
-                                <input type="date" class="form-control" placeholder="Y-M-D" name="dor" value="{{ old('dor') }}">
+                                <input type="date" class="form-control" placeholder="Y-M-D" name="dor" value="{{ old('dor') }}" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label">Phone</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
+                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" required>
                             </div>
                         </div>
 

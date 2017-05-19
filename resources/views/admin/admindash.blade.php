@@ -25,7 +25,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="green" data-image="{{ asset ('assets/img/sidebar-2.jpg')}}">
+    <div class="sidebar" data-color="blue" data-image="{{ asset ('assets/img/sidebar-2.jpg')}}">
 
     <!--
 
@@ -42,38 +42,48 @@
             </div>
 
             <ul class="nav">
+							<hr>
                 <li class="active">
-                    <a href="/system/members">
-                        <i class="pe-7s-graph"></i>
-                        <p>Manage Members</p>
+                    <a>
+                        <h5>Manage Members</h5>
                     </a>
                 </li>
-                <li>
+								<hr>
+								<li>
+                    <a href="/system/create">
+                        <i class="pe-7s-server"></i>
+                        <p>New Member</p>
+                    </a>
+                </li>
+								<li>
+                    <a href="/system/member/view">
+                        <i class="pe-7s-look"></i>
+                        <p>View Members</p>
+                    </a>
+                </li>
+								<hr><hr>
+                <li class="active">
+                    <a>
+                        <h5>Reminders</h5>
+                    </a>
+                </li>
+								<hr>
+								<li>
                     <a href="/system/reminders">
-                        <i class="pe-7s-note"></i>
-                        <p>Reminders</p>
+                        <i class="pe-7s-speaker"></i>
+                        <h5>DL Reminders</h5>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
+								<li>
+                    <a href="/system/reminders">
+                        <i class="pe-7s-speaker"></i>
+                        <h5>Insurance Reminders</h5>
                     </a>
                 </li>
+								<hr><hr>
+
                 <li>
-                    <a href="">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="maps.html">
+                    <a href="#">
                         <i class="pe-7s-map-marker"></i>
                         <p>Mapped Routes</p>
                     </a>
@@ -102,48 +112,11 @@
                                 <i class="fa fa-dashboard"></i>
                             </a>
                         </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-globe"></i>
-                                    <b class="caret"></b>
-                                    <span class="notification">5</span>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </li>
+
+
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                           <a href="">
-                               Account
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Dropdown
-                                    <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                              </ul>
-                        </li>
                         <li>
                           <a href="{{ url('/logout') }}"
                               onclick="event.preventDefault();

@@ -11,13 +11,18 @@ class LoginCtrl extends Controller
 
     $user = Sentinel::forceAuthenticate($request->all());
 
-    if(Sentinel::getUser()->roles()->first()->slug == 'admin'){
-      return redirect('/system/admin');
-    } elseif (Sentinel::getUser()->roles()->first()->slug == 'clerk') {
-      return redirect('/system/create');
-    } else {
-      return redirect('/');
+    try {
+      if(Sentinel::getUser()->roles()->first()->slug == 'admin'){
+        return redirect('/system/admin');
+      } elseif (Sentinel::getUser()->roles()->first()->slug == 'clerk') {
+        return redirect('/system/create');
+      } else {
+        return redirect('/');
+      }
+    } catch (Exception $e) {
+      return $e;
     }
+
 
   }
 
